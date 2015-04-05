@@ -1,0 +1,60 @@
+{
+  "hosts":[
+    {
+      "name":"Router_A",
+      "protocol":{
+        "type":"ospf",
+        "lo":"50.0.0.1/32",
+        "router id":"50.0.0.1"
+      }
+    },
+    {
+      "name":"Router_B",
+      "protocol":{
+        "type":"ospf",
+        "lo":"50.0.0.2/32",
+        "router id":"50.0.0.2"
+      }
+    },
+    {
+      "name":"Client_1"
+    },
+    {
+      "name":"Client_2"
+    }
+  ],
+  "links":[
+    [
+        {
+          "host":"Router_A",
+          "ip address":"10.0.0.1/30"
+        },
+        {
+          "host":"Router_B",
+          "ip address":"10.0.0.2/30"
+        }
+    ],
+    [
+      {
+        "host":"Router_A",
+        "ip address":"20.0.0.1/24"
+      },
+      {
+        "host":"Client_1",
+        "ip address":"20.0.0.2/24",
+        "gateway":"20.0.0.1"
+      }
+    ],
+    [
+      {
+        "host":"Router_B",
+        "ip address":"30.0.0.1/24"
+      },
+      {
+        "host":"Client_2",
+        "ip address":"30.0.0.2/24",
+        "gateway":"30.0.0.1"
+      }
+    ]
+  ]
+}

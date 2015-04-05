@@ -1,0 +1,19 @@
+{
+  "name": "netsim",
+  "version": "0.0.0",
+  "description": "Network simulator using quagga",
+  "main": "lib/app.js",
+  "dependencies": {
+    "daemon": "~1.1.0",
+    "async": "~0.9.0",
+    "winston": "~0.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodejs app.js",
+    "stop": "nodejs app.js stop"
+  },
+  "author": "Chris Pollard",
+  "license": "MIT"
+}
